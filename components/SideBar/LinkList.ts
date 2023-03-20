@@ -13,17 +13,17 @@ export const links: Array<ISideBarLinkProps> = [
     },
     {
         icon: GiSkills,
-        text: "Personal Skills",
+        text: "Skills",
         href: "#personal-skill"
     },
     {
         icon: RiStackLine,
-        text: "Tech Stack",
+        text: "Stack",
         href: "#tech-stack"
     },
     {
         icon: AiOutlineInfoCircle,
-        text: "About Me",
+        text: "About",
         href: "#about-me"
     },
     {
@@ -33,7 +33,7 @@ export const links: Array<ISideBarLinkProps> = [
     },
     {
         icon: MdEmail,
-        text: "Contact Me",
+        text: "Contact",
         href: "#contact-me"
     }
 ]

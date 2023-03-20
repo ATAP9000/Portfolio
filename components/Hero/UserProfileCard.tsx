@@ -7,14 +7,6 @@ import { Blob } from "../Blob";
 import { IconLink } from "../Links/IconLink";
 import { SiGithub, SiLinkedin } from "react-icons/si"
 
-const RESUME = `
-Developer specialized mostly in .NET technologies. I've been developing
-applications in ASP.NET (WebForms and MVC) and I do also have some knowledge in
-Ruby on Rails, Javascript Frontend Libraries/Frameworks like React and JQuery,
-and Databases like MSSQL. I'm always willing to learn new things
-in the field so I can earn more experience to become a better developer.
-`
-
 const Age = new Date().getFullYear() - 1997
 
 export const UserProfileCard: FC = (): JSX.Element => {
@@ -49,10 +41,10 @@ export const UserProfileCard: FC = (): JSX.Element => {
                     <Spacer />
                     <Flag />
                 </Flex>
-                <Resume text={RESUME} />
+                <Resume />
                 <Flex mt={{base: 5, sm: 5, md: 10, lg: 10}} justifyContent="flex-end" px={6} >
                     <HStack spacing={4} >
-                    <IconLink icon={SiGithub} tooltip="Github" href="https://github.com/ATAP9000"  text="" />
+                    <IconLink icon={SiGithub} tooltip="Github" color={"gray.800"} href="https://github.com/ATAP9000"  text="" />
                     <IconLink icon={SiLinkedin} tooltip="Linkedin" color="#0077b5" href="https://www.linkedin.com/in/angelo-tarazona-350346241" text="" />
                     </HStack>
                 </Flex>

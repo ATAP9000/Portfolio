@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { useRouter } from 'next/router';
 import {
     Popover,
     PopoverTrigger,
@@ -15,6 +16,8 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { IPopOverProps } from "./IProps";
 
   export const TechPopOver: FC<IPopOverProps> = (props): JSX.Element => {
+    const router = useRouter();
+    const { locale } = router;
     return (
         <Popover trigger="hover" >
             <PopoverTrigger>
@@ -25,7 +28,7 @@ import { IPopOverProps } from "./IProps";
             }} >
                 <PopoverArrow />
                 <PopoverCloseButton />
-                <PopoverHeader>{props.header} skills</PopoverHeader>
+                <PopoverHeader>{props.header} {locale === "en" ? "skills": "conocimientos"}</PopoverHeader>
                 <PopoverBody>
                     <List>
                         {props.data.map((val, index): JSX.Element => {

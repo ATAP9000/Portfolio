@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { HStack } from "@chakra-ui/react";
+import { HStack, Spacer } from "@chakra-ui/react";
 import { IconBox } from "./IconBox";
 import { SkillDescription } from "./SkillDescription";
 import { IProps } from "./IProps"
@@ -24,6 +24,7 @@ export const SkillBox: FC<IProps> = (props): JSX.Element => {
                     header={props.title}
                     description={props.description}
                 />
+                <Spacer />
                 <IconBox icon={props.icon} />
             </HStack>
         )

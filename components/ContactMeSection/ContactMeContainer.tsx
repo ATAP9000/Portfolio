@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-import { Box, Container, Flex, Wrap } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 
 export const ContactMeContainer: FC = (props): JSX.Element => {
     return (
-        <Container id="contact-me" as="section" bg="white" maxW="full" mt={0} centerContent overflow="hidden"  >
+        <Container id="contact-me" as="section" maxW="full" mt={0} centerContent overflow="hidden"  >
             <Flex my={10} >
                 <Box
                     bg="black"
@@ -12,10 +12,10 @@ export const ContactMeContainer: FC = (props): JSX.Element => {
                     m={{ sm: 4, md: 16, lg: 10 }}
                     p={{ sm: 5, md: 5, lg: 16 }}
                 >
-                    <Box p={4}>
-                        <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+                    <Box p={4} display={"flex"}>
+                        <Flex>
                             {props.children}
-                        </Wrap>
+                        </Flex>
                     </Box>
                 </Box>
             </Flex>

@@ -3,8 +3,15 @@ import { Container, Stack, Center } from "@chakra-ui/react";
 import { UserProfileCard } from "./UserProfileCard";
 import { BackgroundHeader } from "./BackgroundHeader"
 import { UnderlineHeader } from "./UnderlineHeader";
+import { useRouter } from 'next/router';
+import { EnLocale } from '@/locales/en';
+import { EsLocale } from '@/locales/es';
+import { IProps } from '@/locales/IProps';
 
 export const Hero: FC = (): JSX.Element => {
+    const router = useRouter();
+    const { locale } = router;
+    const lang : IProps = (locale === 'en') ? new EnLocale() : new EsLocale();
     return (
         <Container id="hero" maxW={'7xl'} mb={8} >
             <Stack
@@ -14,7 +21,7 @@ export const Hero: FC = (): JSX.Element => {
                 direction={{ base: "column", md: "column", lg: "row" }}>
                 <Stack flex={1} spacing={{ base: 7, md: 10 }}>
                     <UnderlineHeader text="Angelo Tarazona" />
-                    <BackgroundHeader text="Fullstack Web Developer" />
+                    <BackgroundHeader text={lang.Title} />
                 </Stack>
                 <UserProfileCard />
             </Stack>

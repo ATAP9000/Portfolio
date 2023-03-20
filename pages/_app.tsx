@@ -1,7 +1,8 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import { Roboto_Condensed } from '@next/font/google';
+import theme from './theme';
 
 const roboto = Roboto_Condensed({
   weight: '300',
@@ -10,7 +11,8 @@ const roboto = Roboto_Condensed({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <style jsx global>{`
         html {
           font-family: ${roboto.style.fontFamily};

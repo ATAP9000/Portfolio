@@ -7,27 +7,27 @@ export const links: Array<INavLink> = [
         hasBackground: false
     },
     {
-        text: "Personal Skills",
+        text: "Skills",
         href: "#personal-skill",
         hasBackground: false
     },
     {
-        text: "Tech Stack",
+        text: "Stack",
         href: "#tech-stack",
         hasBackground: false
     },
     {
-        text: "About Me",
+        text: "About",
         href: "#about-me",
         hasBackground: false
     },
+    // {
+    //     text: "Certificates",
+    //     href: "#certificates",
+    //     hasBackground: false
+    // },
     {
-        text: "Certificates",
-        href: "#certificates",
-        hasBackground: false
-    },
-    {
-        text: "Contact Me",
+        text: "Contact",
         href: "#contact-me",
         hasBackground: true
     },

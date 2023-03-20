@@ -5,7 +5,7 @@ import { ContactInfoList } from "./ContactInfoList";
 
 export const ContactInfo: FC = () => {
     return (
-        <WrapItem>
+        <WrapItem width={"35%"}>
             <Box>
                 <ContactHeader />
                 <ContactInfoList />
