@@ -1,7 +1,11 @@
 import React, { FC } from "react";
 import { Box, Container, Flex } from "@chakra-ui/react";
 
-export const ContactMeContainer: FC = (props : any): JSX.Element => {
+type Props = {
+    children?: React.ReactNode
+  };
+
+export const ContactMeContainer: FC<Props> = (props): JSX.Element => {
     return (
         <Container id="contact-me" as="section" maxW="full" mt={0} centerContent overflow="hidden"  >
             <Flex my={10} >

@@ -7,10 +7,13 @@ const initialState: IState = {
     isLoading: false,
 };
 
+type Props = {
+    children?: React.ReactNode
+  };
+
 const AppContext = createContext<IContext>({ state: initialState });
 
-//@ts-ignore
-export const AppProvider: FC = ({ children }): JSX.Element => {
+export const AppProvider: FC<Props> = ({children}): JSX.Element => {
     const [state, dispatch] = useReducer(appReducer, initialState);
     return (
         <AppContext.Provider value={{state, dispatch}} >
