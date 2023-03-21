@@ -17,7 +17,8 @@ export const SkillBoxList: FC = (): JSX.Element => {
             {
                 skills.map((skill): JSX.Element => {
                     return (
-                        <SkillBox 
+                        <SkillBox
+                            key={skill.title}
                             icon={skill.icon}
                             title={skill.title}
                             description={skill.description}

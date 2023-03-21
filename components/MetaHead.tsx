@@ -21,7 +21,7 @@ export const MetaHead: FC<IProps> = (props): JSX.Element => {
                 {
                     props.meta.map((meta): JSX.Element => {
                         return (
-                            <meta name={meta.name} content={meta.content} />
+                            <meta key={meta.name} name={meta.name} content={meta.content} />
                         )
                     })
                 }

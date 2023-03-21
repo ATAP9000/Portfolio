@@ -13,7 +13,7 @@ export interface ITechSectionProps {
 export interface IPopOverProps {
     header: string;
     data: string[];
-    children?: any;
+    children: any;
 }
 
 export interface ITechBoxProps {

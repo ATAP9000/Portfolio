@@ -11,7 +11,6 @@ export const TechBoxList: FC<ITechBoxListProps> = (props): JSX.Element => {
         {props.data.map((tech, index): JSX.Element => {
           return (
             <WrapItem key={index} >
-              <TechPopOver header={tech.text} data={tech.skills}>
                 <TechBox
                   backgroundColor={tech.backgroundColor}
                   color={tech.color}
@@ -19,7 +18,6 @@ export const TechBoxList: FC<ITechBoxListProps> = (props): JSX.Element => {
                   text={tech.text}
                   skills={tech.skills}
                 />
-              </TechPopOver>
             </WrapItem>
           );
         })}

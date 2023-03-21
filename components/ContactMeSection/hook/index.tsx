@@ -1,7 +1,8 @@
 import React, { useCallback, useState } from "react";
 import { useToast } from "@chakra-ui/react"
-import { IEmail } from "../../../services/mailer/IEMailService";
-import { MailerService } from "../../../services"
+import { IEmail } from "@/services/mailer/IEMailService";
+import { useAppContext } from "@/context";
+import { MailerService } from "@/services";
 import { IState } from "./IState";
 
 export const useContactForm = () => {
@@ -15,7 +16,7 @@ export const useContactForm = () => {
         error: false,
     });
 
-    // const { dispatch } = useAppContext();
+    const { dispatch } = useAppContext();
 
     const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         const { name, value } = e.target;
@@ -35,12 +36,12 @@ export const useContactForm = () => {
 
     const onClick = useCallback(async () => {
         const data: IEmail = {
-            email: state.email,
-            name: state.name,
-            message: state.message 
+            Email: state.email,
+            Name: state.name,
+            Message: state.message 
         }
 
-        // dispatch({ type: "REQUEST" });
+        dispatch!({ type: "REQUEST" });
 
         await service.SendEmail(data).then((message) => {
             toast({
@@ -58,7 +59,7 @@ export const useContactForm = () => {
             });
         });
 
-        // dispatch({ type: "DONE" });
+        dispatch!({ type: "DONE" });
     }, [state])
 
     return { state, onFocus, onChange, onClick };

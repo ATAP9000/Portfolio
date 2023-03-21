@@ -21,11 +21,6 @@ export const links: Array<INavLink> = [
         href: "#about-me",
         hasBackground: false
     },
-    // {
-    //     text: "Certificates",
-    //     href: "#certificates",
-    //     hasBackground: false
-    // },
     {
         text: "Contact",
         href: "#contact-me",

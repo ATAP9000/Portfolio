@@ -31,7 +31,7 @@ import { IPopOverProps } from "./IProps";
                 <PopoverHeader>{props.header} {locale === "en" ? "skills": "conocimientos"}</PopoverHeader>
                 <PopoverBody>
                     <List>
-                        {props.data.map((val, index): JSX.Element => {
+                        {props.data.map((val,index): JSX.Element => {
                             return (
                                 <ListItem key={index} >
                                     <ListIcon as={AiFillCheckCircle} color="green.300" />

@@ -3,7 +3,7 @@ import { IEmail, IEmailService } from "./IEMailService";
 // TODO
 export class MailerService implements IEmailService {
     public SendEmail = async (email: IEmail): Promise<string> => {
-        const response = await fetch("https://serviceapi.com", {
+        const response = await fetch("https://localhost:7140/Email", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

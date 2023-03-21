@@ -1,7 +1,7 @@
 export interface IEmail {
-    name: string;
-    email: string;
-    message: string;
+    Name: string;
+    Email: string;
+    Message: string;
 }
 
 export interface IEmailService {
