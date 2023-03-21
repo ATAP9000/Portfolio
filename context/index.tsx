@@ -9,6 +9,7 @@ const initialState: IState = {
 
 const AppContext = createContext<IContext>({ state: initialState });
 
+//@ts-ignore
 export const AppProvider: FC = ({ children }): JSX.Element => {
     const [state, dispatch] = useReducer(appReducer, initialState);
     return (

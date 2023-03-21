@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 export const LocaleSelect: FC = (): JSX.Element => {
     const router = useRouter();
     const { locale } = router;
+    //@ts-ignore
     const changeLanguage = (e) => {
         const locale = e.target.value;
         router.push(router.basePath , router.basePath, { locale });
