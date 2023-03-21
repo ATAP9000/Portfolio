@@ -6,6 +6,7 @@ import { Spacer } from "@chakra-ui/react";
 
 export const ContactMeSection: FC = () => {
   return (
+      //@ts-ignore
       <ContactMeContainer>
         <ContactInfo />
         <Spacer />
