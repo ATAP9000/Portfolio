@@ -12,6 +12,7 @@ const roboto = Roboto_Condensed({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
+    //@ts-ignore
     <AppProvider>
       <ChakraProvider theme={theme}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
