@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import { Roboto_Condensed } from '@next/font/google';
 import { AppProvider } from "@/context";
-import theme from './theme';
+import theme from '../styles/theme';
 
 const roboto = Roboto_Condensed({
   weight: '300',
@@ -24,5 +24,4 @@ export default function App({ Component, pageProps }: AppProps) {
       </ChakraProvider>
     </AppProvider>
   )
-
 }
