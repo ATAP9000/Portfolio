@@ -14,7 +14,7 @@ export const FormButton: FC<IFormButtonProps> = (props): JSX.Element => {
         <FormControl id="name" float="right">
             <Button
                 variant="solid"
-                bg="#0D74FF"
+                bg="black"
                 color="white"
                 onClick={props.onClick}
             >

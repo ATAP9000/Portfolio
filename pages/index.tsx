@@ -1,7 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
-import { Box, CircularProgress } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import { NextPage } from "next";
 import { MetaHead, NavBar, Hero, PersonalSkillsSection, TechStackSection, AboutMeSection, ContactMeSection } from "components";
 
