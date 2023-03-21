@@ -22,6 +22,7 @@ export const ContactForm: FC = (): JSX.Element => {
     const { locale } = router;
     const lang : IPropLocale = (locale === 'en') ? new EnLocale() : new EsLocale();
     return (
+        //@ts-ignore
         <WrapItem width={"50%"}>
             <Box pos="relative" bg="white" borderRadius="md" boxShadow="md" width={"100%"} >
                 { isLoading && <Loading /> }
